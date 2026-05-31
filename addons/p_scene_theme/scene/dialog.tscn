@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://b5aqwnqox1g7o"]
+
+[ext_resource type="Script" uid="uid://dvct3ajqi6q2t" path="res://addons/p_scene_theme/scene/dialog.gd" id="1_neggw"]
+
+[sub_resource type="Theme" id="Theme_87mwe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5bah"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.14117648, 0.14117648, 0.14117648, 1)
+
+[node name="DialogPopup" type="Window" unique_id=1504584329 node_paths=PackedStringArray("save_button", "prefix", "remove_prefix_button")]
+oversampling_override = 1.0
+title = "Theme"
+position = Vector2i(0, 36)
+size = Vector2i(300, 124)
+minimize_disabled = true
+maximize_disabled = true
+min_size = Vector2i(300, 124)
+script = ExtResource("1_neggw")
+save_button = NodePath("PanelContainer/BoxContainer/HBoxContainer3/SaveButton")
+prefix = NodePath("PanelContainer/BoxContainer/HBoxContainer/Prefix")
+remove_prefix_button = NodePath("PanelContainer/BoxContainer/HBoxContainer2/RemovePrefix")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=453478757]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_87mwe")
+theme_override_styles/panel = SubResource("StyleBoxFlat_u5bah")
+
+[node name="BoxContainer" type="BoxContainer" parent="PanelContainer" unique_id=1072099976]
+layout_mode = 2
+theme_override_constants/separation = 4
+vertical = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/BoxContainer" unique_id=812203617]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="PanelContainer/BoxContainer/HBoxContainer" unique_id=1381737449]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "节点前缀"
+horizontal_alignment = 1
+
+[node name="Prefix" type="LineEdit" parent="PanelContainer/BoxContainer/HBoxContainer" unique_id=912502324]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "从所选节点向下遍历获取符合此前缀的节点.
+(不包含其它场景的节点)"
+placeholder_text = "TTV_"
+max_length = 11
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/BoxContainer" unique_id=856947510]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/BoxContainer/HBoxContainer2" unique_id=1646494441]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"TTV_Label_fusion_10px_g1"
+text = "类型移除前缀"
+horizontal_alignment = 1
+
+[node name="RemovePrefix" type="CheckButton" parent="PanelContainer/BoxContainer/HBoxContainer2" unique_id=987066307]
+layout_mode = 2
+tooltip_text = "保存时的主题类型名将移除节点前缀"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/BoxContainer" unique_id=180832419]
+layout_mode = 2
+
+[node name="Separate" type="Control" parent="PanelContainer/BoxContainer/HBoxContainer3" unique_id=1930450549]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveButton" type="Button" parent="PanelContainer/BoxContainer/HBoxContainer3" unique_id=869006614]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+text = "Save"
+
+[node name="Separate2" type="Control" parent="PanelContainer/BoxContainer/HBoxContainer3" unique_id=1042696705]
+layout_mode = 2
+size_flags_horizontal = 3

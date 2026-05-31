@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://dk2n8cqu5s5wy"]
+
+[ext_resource type="FontFile" uid="uid://cfx1pc1gjap80" path="res://__example/font/fusion-pixel-8px-monospaced-zh_hans.ttf" id="1_2ib3h"]
+[ext_resource type="Texture2D" uid="uid://dmf3jkhas0brn" path="res://__example/UI Asset Pack/UI_ASSETPACK_full_image.png" id="1_v1bgw"]
+[ext_resource type="Script" uid="uid://8v7aeqi01ly7" path="res://__example/script/drag_camera.gd" id="2_j2ios"]
+[ext_resource type="FontFile" uid="uid://wwj42ocppmon" path="res://__example/font/fusion-pixel-10px-monospaced-zh_hans.ttf" id="2_v1bgw"]
+[ext_resource type="Theme" uid="uid://dh3fp7elgh8hl" path="res://__example/example_theme.tres" id="3_4isgw"]
+[ext_resource type="FontFile" uid="uid://bqqd8nm37hsia" path="res://__example/font/fusion-pixel-12px-monospaced-zh_hans.ttf" id="3_j2ios"]
+[ext_resource type="Script" uid="uid://f3vsnyvo8reu" path="res://__example/example_theme.gd" id="4_s1ece"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4isgw"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(80, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1ece"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(48, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lla4"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(16, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_genfo"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(16, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2ios"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(19, 56, 11, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2mdj"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(51, 56, 11, 19)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfqil"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_genfo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4isgw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1bgw"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(176, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ib3h"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(368, 208, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_genfo"]
+texture = SubResource("AtlasTexture_2ib3h")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kam5d"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(368, 224, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ie5w7"]
+texture = SubResource("AtlasTexture_kam5d")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axvqr"]
+atlas = ExtResource("1_v1bgw")
+region = Rect2(240, 112, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fpcdl"]
+texture = SubResource("AtlasTexture_axvqr")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[node name="Convert" type="Node2D" unique_id=38591685]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2088658699]
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=884402868]
+anchor_mode = 0
+script = ExtResource("2_j2ios")
+
+[node name="UiAssetpackFullImage" type="Sprite2D" parent="Node2D" unique_id=194661103]
+position = Vector2(736, 216)
+texture = ExtResource("1_v1bgw")
+
+[node name="Label" type="Label" parent="Node2D/UiAssetpackFullImage" unique_id=1163561361]
+offset_left = -208.0
+offset_top = -264.0
+offset_right = 210.0
+offset_bottom = -189.0
+text = "Font -> github.com/TakWolf/fusion-pixel-font/releases
+Asset -> beowulf.itch.io/menu-ui-asset-pack
+"
+
+[node name="Example_Theme" type="Control" parent="." unique_id=322509176]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_4isgw")
+script = ExtResource("4_s1ece")
+
+[node name="Label" type="Control" parent="Example_Theme" unique_id=859139269]
+anchors_preset = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Example_Theme/Label" unique_id=626011154]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TTV_Label_fusion_8px" type="Label" parent="Example_Theme/Label/VBoxContainer" unique_id=1231879115]
+layout_mode = 2
+theme_type_variation = &"TTV_Label_fusion_8px"
+theme_override_fonts/font = ExtResource("1_2ib3h")
+theme_override_font_sizes/font_size = 8
+text = "12汉字AaBb"
+
+[node name="TTV_Label_fusion_10px" type="Label" parent="Example_Theme/Label/VBoxContainer" unique_id=550279234]
+layout_mode = 2
+theme_type_variation = &"TTV_Label_fusion_10px"
+theme_override_fonts/font = ExtResource("2_v1bgw")
+theme_override_font_sizes/font_size = 10
+text = "12汉字AaBb"
+
+[node name="TTV_Label_fusion_12px" type="Label" parent="Example_Theme/Label/VBoxContainer" unique_id=1178781317]
+layout_mode = 2
+theme_type_variation = &"TTV_Label_fusion_12px"
+theme_override_fonts/font = ExtResource("3_j2ios")
+theme_override_font_sizes/font_size = 12
+text = "12汉字AaBb"
+
+[node name="CheckButton" type="Control" parent="Example_Theme" unique_id=919455924]
+anchors_preset = 0
+
+[node name="TTV_CheckButton_a" type="CheckButton" parent="Example_Theme/CheckButton" unique_id=734962980]
+layout_mode = 0
+offset_left = 88.0
+offset_right = 132.0
+offset_bottom = 40.0
+theme_type_variation = &"TTV_CheckButton_a"
+theme_override_icons/checked = SubResource("AtlasTexture_4isgw")
+theme_override_icons/unchecked = SubResource("AtlasTexture_s1ece")
+theme_override_icons/checked_disabled = SubResource("AtlasTexture_0lla4")
+theme_override_icons/unchecked_disabled = SubResource("AtlasTexture_genfo")
+
+[node name="HSlider" type="Control" parent="Example_Theme" unique_id=2011654562]
+anchors_preset = 0
+
+[node name="TTV_HSlider_a" type="HSlider" parent="Example_Theme/HSlider" unique_id=1610617509]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 8.0
+offset_right = 251.0
+offset_bottom = 27.0
+size_flags_horizontal = 3
+theme_type_variation = &"TTV_HSlider_a"
+theme_override_icons/grabber = SubResource("AtlasTexture_j2ios")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_j2ios")
+theme_override_icons/grabber_disabled = SubResource("AtlasTexture_m2mdj")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_jfqil")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_genfo")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_4isgw")
+
+[node name="NinePatchRect" type="TextureRect" parent="Example_Theme/HSlider/TTV_HSlider_a" unique_id=1060082532]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_v1bgw")
+stretch_mode = 1
+
+[node name="Button" type="Control" parent="Example_Theme" unique_id=1437865320]
+anchors_preset = 0
+
+[node name="TTV_Button_a" type="Button" parent="Example_Theme/Button" unique_id=2070759926]
+custom_minimum_size = Vector2(48, 16)
+layout_mode = 0
+offset_left = 96.0
+offset_top = 40.0
+offset_right = 189.0
+offset_bottom = 56.0
+size_flags_horizontal = 3
+theme_type_variation = &"TTV_Button_a"
+theme_override_styles/normal = SubResource("StyleBoxTexture_genfo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ie5w7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_genfo")
+theme_override_styles/focus = SubResource("StyleBoxTexture_genfo")
+toggle_mode = true
+
+[node name="Panel" type="Control" parent="Example_Theme" unique_id=502246986]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TTV_Panel_a" type="Panel" parent="Example_Theme/Panel" unique_id=1125518067]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 64.0
+offset_right = 47.0
+offset_bottom = 88.0
+theme_type_variation = &"TTV_Panel_a"
+theme_override_styles/panel = SubResource("StyleBoxTexture_fpcdl")
+
+[node name="Example_Test" type="Control" parent="." unique_id=1510412098]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_4isgw")
+
+[node name="Panel" type="Panel" parent="Example_Test" unique_id=977106870]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 112.0
+offset_right = 110.0
+offset_bottom = 199.0
+theme_type_variation = &"TTV_Panel_a"
+
+[node name="Button" type="Button" parent="Example_Test/Panel" unique_id=1777665721]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_top = 13.0
+offset_right = 36.0
+offset_bottom = 35.0
+grow_horizontal = 2
+theme_type_variation = &"TTV_Button_a"
+
+[node name="Label" type="Label" parent="Example_Test/Panel/Button" unique_id=1132456828]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"TTV_Label_fusion_10px"
+text = "12汉字AaBb"
+horizontal_alignment = 1
+vertical_alignment = 1

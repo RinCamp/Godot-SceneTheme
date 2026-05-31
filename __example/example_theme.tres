@@ -1,0 +1,99 @@
+[gd_resource type="Theme" format=3 uid="uid://dh3fp7elgh8hl"]
+
+[ext_resource type="Texture2D" uid="uid://dmf3jkhas0brn" path="res://__example/UI Asset Pack/UI_ASSETPACK_full_image.png" id="1_pyeem"]
+[ext_resource type="FontFile" uid="uid://wwj42ocppmon" path="res://__example/font/fusion-pixel-10px-monospaced-zh_hans.ttf" id="2_10seu"]
+[ext_resource type="FontFile" uid="uid://bqqd8nm37hsia" path="res://__example/font/fusion-pixel-12px-monospaced-zh_hans.ttf" id="3_e8l4d"]
+[ext_resource type="FontFile" uid="uid://cfx1pc1gjap80" path="res://__example/font/fusion-pixel-8px-monospaced-zh_hans.ttf" id="4_xdy48"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ib3h"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(368, 208, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_genfo"]
+texture = SubResource("AtlasTexture_2ib3h")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kam5d"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(368, 224, 48, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ie5w7"]
+texture = SubResource("AtlasTexture_kam5d")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4isgw"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(80, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lla4"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(16, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1ece"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(48, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_genfo"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(16, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2ios"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(19, 56, 11, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2mdj"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(51, 56, 11, 19)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_genfo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4isgw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jfqil"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axvqr"]
+atlas = ExtResource("1_pyeem")
+region = Rect2(240, 112, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fpcdl"]
+texture = SubResource("AtlasTexture_axvqr")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[resource]
+TTV_Button_a/base_type = &"Button"
+TTV_Button_a/styles/focus = SubResource("StyleBoxTexture_genfo")
+TTV_Button_a/styles/hover = SubResource("StyleBoxTexture_genfo")
+TTV_Button_a/styles/normal = SubResource("StyleBoxTexture_genfo")
+TTV_Button_a/styles/pressed = SubResource("StyleBoxTexture_ie5w7")
+TTV_CheckButton_a/base_type = &"CheckButton"
+TTV_CheckButton_a/icons/checked = SubResource("AtlasTexture_4isgw")
+TTV_CheckButton_a/icons/checked_disabled = SubResource("AtlasTexture_0lla4")
+TTV_CheckButton_a/icons/unchecked = SubResource("AtlasTexture_s1ece")
+TTV_CheckButton_a/icons/unchecked_disabled = SubResource("AtlasTexture_genfo")
+TTV_HSlider_a/base_type = &"HSlider"
+TTV_HSlider_a/icons/grabber = SubResource("AtlasTexture_j2ios")
+TTV_HSlider_a/icons/grabber_disabled = SubResource("AtlasTexture_m2mdj")
+TTV_HSlider_a/icons/grabber_highlight = SubResource("AtlasTexture_j2ios")
+TTV_HSlider_a/styles/grabber_area = SubResource("StyleBoxEmpty_genfo")
+TTV_HSlider_a/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_4isgw")
+TTV_HSlider_a/styles/slider = SubResource("StyleBoxEmpty_jfqil")
+TTV_Label_fusion_10px/base_type = &"Label"
+TTV_Label_fusion_10px/font_sizes/font_size = 10
+TTV_Label_fusion_10px/fonts/font = ExtResource("2_10seu")
+TTV_Label_fusion_12px/base_type = &"Label"
+TTV_Label_fusion_12px/font_sizes/font_size = 12
+TTV_Label_fusion_12px/fonts/font = ExtResource("3_e8l4d")
+TTV_Label_fusion_8px/base_type = &"Label"
+TTV_Label_fusion_8px/font_sizes/font_size = 8
+TTV_Label_fusion_8px/fonts/font = ExtResource("4_xdy48")
+TTV_Panel_a/base_type = &"Panel"
+TTV_Panel_a/styles/panel = SubResource("StyleBoxTexture_fpcdl")
