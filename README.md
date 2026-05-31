@@ -1,6 +1,6 @@
 # SceneTheme - 用场景管理游戏主题
 
-<img width="400" height="232" alt="pic" src="https://github.com/user-attachments/assets/ddb751eb-2ecd-4cd8-8013-1ad018351069" />
+<img width="1291" height="939" alt="1" src="https://github.com/user-attachments/assets/e9e2eeec-6da1-4284-b423-00f028e6e731" />
 
 将主题编辑的工作, 从杂乱的主题编辑器中解放出来
 
